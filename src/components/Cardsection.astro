@@ -1,17 +1,30 @@
 ---
 import Card from "./Card.astro";
 ---
-<section class="cards">
-    <header>
-      <h2>tester</h2>
-    </header>
+<section class="card-section">
+  <h2 class="card-title">Our weekly pick!</h2>
+    <h2 class="card-title">Copenhagen’s hottest Arcade bar</h2>
+    <hr>
+</section>
 
-    <ul>
-  
-        <Card title="Okay" />
-        <Card title="Ok"/>
-        <Card title="helt fint"/>
-        <Card title="eyyyy"/>
-        <Card title="helt fint" />
-    </ul>
-  </section>
+<style>
+  .card-title {
+    font-family: "Anton", sans-serif; 
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    margin-top: -10px;
+  }
+
+  .card-text {
+    font-family: "Anton", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .card-section {
+    padding: 2rem;
+    border-radius: 12px;
+  }
+</style>
