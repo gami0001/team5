@@ -1,13 +1,10 @@
 ---
-import Button from "./Button.astro";
-const {title} = Astro.props;
+const { image, title, text, variant = "primary" } = Astro.props;
 ---
 
 
-    <h1>{title}</h1>
-    <hr/>
-    <p>
-      lets get it bitches
-    </p>
-
-  
+<div class={`card ${variant}`}>
+  <img src={image} alt={title} />
+  <h3>{title}</h3>
+  <p>{text}</p>
+</div>
