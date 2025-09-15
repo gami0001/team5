@@ -1,5 +1,131 @@
+---
+import Cardsection from "./Cardsection.astro"
+---
 
-<img src="/headertest.svg" alt="logoheader" style="width: 100%" />
+<header>
+  <img src="/headertest.svg" alt="logoheader" style="width: 100%" />
+
+  <nav class="nav">
+    <ul class="menu">
+      <li><a class="card-title" href="/">About</a></li>
+      <li><a class="card-title" href="/article">Article</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+</header>
+
 <style>
-    
+  header {
+    position: relative;
+    width: 100%;
+  }
+
+  .logo {
+    width: 100%;
+    display: block;
+    height: auto;
+  }
+
+  .nav {
+    position: absolute;
+    inset: 0;
+  }
+
+  .burger {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 48px;
+    height: 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 8px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 50;
+  }
+
+  .burger .line {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    transition: transform 0.3s ease, opacity 0.2s ease;
+    transform-origin: center;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 1rem;
+    right: 1rem;
+    margin: 0;
+    padding: 0.8rem 1rem;
+    list-style: none;
+    background: rgba(62, 62, 62, 0.676);
+    border-radius: 8px;
+    z-index: 40;
+  }
+
+  .menu li {
+    margin: 8px 0;
+  }
+
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 6px 4px;
+    font-family: "Anton", sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+  }
+
+  .menu a:hover {
+color:#6B5BFF;
+  }
+
+
+  .nav.active .menu {
+    display: block;
+  }
+
+  .nav.active .burger .line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .nav.active .burger .line:nth-child(2) {
+    opacity: 0;
+  }
+  .nav.active .burger .line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+    const menu = document.querySelector(".menu");
+
+    if (!burger || !nav || !menu) return;
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+
+    menu.addEventListener("click", (e) => {
+      if (e.target instanceof HTMLElement && e.target.tagName === "A") {
+        burger.classList.remove("active");
+        nav.classList.remove("active");
+      }
+    });
+  });
+</script>
