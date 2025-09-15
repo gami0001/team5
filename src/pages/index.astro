@@ -1,27 +1,37 @@
 ---
-import Header from "../components/Header.astro";
-import Cardsection from "../components/Cardsection.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/Button.astro";
-
+import Card from "../components/Card.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 ---
+    <PageLayout>
+		<div class="indexvideo">
+  <video autoplay muted loop width="60%">
+    <source src="/public/indexbastard.mp4" type="video/mp4" />
+  </video>
+</div>
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-		<title>Forside</title>
-	</head>
-	<body>
-		<Header />
-		<Cardsection> 
-		<Footer />
-	</body>
-</html>
+<section class="card-section">
+  <h1 class="card-title">Our weekly pick!</h1>
+  <h2 class="card-title">Copenhagen's hottest Arcade bar</h2>
+  <p class="card-undertextCenter">Bastard Cafe - two locations</p>
+  <p class="card-undertextCenter">Borgmestervangen 21, 2200 Copenhagen N & Rådhusstræde 13, 1466 Copenhagen K</p>
+  <p class="card-text">FEATURED ARTICLES</p>
+  <hr>
+</section>
+
+<h2 class="card-undertext">UNMISSABLE THINGS TO DO IN COPENHAGEN</h2>
+
+<section class="card-section1">
+  <Card image="/img1.jpg" title="Distortion" text= "The citywide street party: A playground of beats, creativity and endless inspiration" />
+  <Card image="/img2.jpg" title="Design Museum Denmark" text="Explore the heart of Scandinavian design at Designmuseum Danmark. Free entrance during K7!" />
+  <Card image="/img3.jpg" title="Frederiksberg Castle" text="A glimpse of Danish royalty framed by stunning baroque architecture and green parklands." />
+  <Card image="/img4.jpg" title="Absalon - Paint & Wine" text="Paint, sip and relax - A student-friendly way to get creative with friends." />
+</section>
+
+<section class="card-section2">
+  <Card image="/img1.jpg" title="Berlin" text="EXPLORE BERLIN'S FREE DESIGN GEMS" variant="secondary"/>
+  <Card image="/img1.jpg" title="Berlin" text="Pocket-Friendly Sights Loved by Locals" variant="secondary"/>
+</section>
+<hr>
+</PageLayout>
 
 
