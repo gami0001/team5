@@ -1,14 +1,34 @@
 ---
 import Card from "./Card.astro";
 ---
-<section class="card-section">
-  <h2 class="card-title">Our weekly pick!</h2>
-    <h2 class="card-title">Copenhagen’s hottest Arcade bar</h2>
+<div class="indexvideo">
+    <video autoplay muted loop width="60%">
+  <source src="/indexbastard.mp4" type="video/mp4" />
+</video>
+</div>
+<section class="card-section"></section>
+  <h1 class="card-title">Our weekly pick!</h1>
+    <h2 class="card-undertext">Copenhagen’s hottest Arcade bar</h2>
     <hr>
 </section>
 
 <style>
+    .indexvideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -25px;
+    }
   .card-title {
+    font-family: "Anton", sans-serif; 
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    margin-top: -10px;
+  }
+
+    .card-undertext {
     font-family: "Anton", sans-serif; 
     font-size: 2rem;
     text-transform: uppercase;
@@ -16,7 +36,6 @@ import Card from "./Card.astro";
     text-align: center;
     margin-top: -10px;
   }
-
   .card-text {
     font-family: "Anton", sans-serif;
     font-size: 1rem;
