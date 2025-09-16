@@ -43,4 +43,19 @@ const { image, title, text, variant = "primary" } = Astro.props;
   font-family: "Inter", sans-serif;
   font-weight: normal;
 }
+
+@media (max-width: 500px) {
+
+  .card.primary h3 {
+  margin-top: -3px;
+  margin-bottom: 5px;
+}
+
+  .card.secondary p {
+  font-family: "Anton", sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+}
+
 </style>
