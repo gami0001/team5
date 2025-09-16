@@ -1,18 +1,46 @@
 ---
-const { variant = "primary, secondary" } = Astro.props;
+const { variant = "primary", icon = null } = Astro.props;
 ---
 
 <button class={variant}>
-  <slot />
+  {icon === "facebook" && <i class="fab fa-facebook-f"></i>}
+  {icon === "instagram" && <i class="fab fa-instagram"></i>}
+  {!icon && <slot />}
 </button>
 
 <style>
-      .primary {
-    background: blue;
-    color: white;
-  }
-    .secondary {
-    background: rgb(243, 54, 54);
-    color: black;
-  }
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 40px;       
+  height: 40px;
+  color: #fff;     
+  margin-left: 1rem;
+  margin-top: 11rem;
+}
+
+.primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.secondary {
+  background-color: #000;
+}
+
+.primary:hover {
+  background-color: #3b5998; 
+}
+
+button i.fab.fa-instagram {
+  color: #fff; 
+}
+
+button:hover i.fab.fa-instagram {
+  color: #e1306c; 
+}
 </style>
