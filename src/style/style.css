@@ -2,9 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: -25px;
 }
 
+.bastard {
+  width: 60%;
+  height: auto;
+}
 .card-section {
   text-align: center;
   gap: 20px;
@@ -31,6 +34,11 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0.5rem 0;
+}
+
+#mp4titel {
+  text-align: center;
+  margin-left: 0;
 }
 
 .card-undertext {
@@ -82,20 +90,111 @@
   text-align: center;
 }
 
+.social-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+}
+
 @media (max-width: 900px) {
   .card-section1 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .bastard {
+    width: 90%;
+    height: auto;
+    margin-bottom: -20px;
+  }
+
+  .card-text {
+    margin-top: 50px;
+  }
+
+  #marginunder {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-left: 70px;
+  }
+
+  #margintext {
+    margin: 0 70px 20px 70px;
+    line-height: 1.8;
+  }
+
+  .articleimg {
+    margin: 20px 0px 10px 0px;
+    width: 95%;
+  }
+
+  .grid_1-1-1 {
+    grid-template-columns: repeat(1, 3fr);
+    padding: 0;
+    margin-bottom: 30px;
+  }
 }
 
 @media (max-width: 500px) {
   .card-section1 {
     grid-template-columns: 1fr;
   }
-}
 
-@media (max-width: 500px) {
   .card-section2 {
     grid-template-columns: 1fr;
+  }
+
+  .card-title {
+    font-family: "Anton", sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0.1rem 0rem;
+  }
+
+  .bastard {
+    width: 90%;
+    height: auto;
+    margin-bottom: -20px;
+  }
+
+  .card-undertextCenter {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  .card-text {
+    margin-top: 50px;
+  }
+
+  .card-undertext {
+    font-size: 1rem;
+    margin-left: 34px;
+  }
+
+  .grid_1-1-1 {
+    grid-template-columns: repeat(1, 3fr);
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+  #mp4titel {
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .articleimg {
+    margin: 20px 0px 10px 0px;
+    width: 100%;
+  }
+
+  #marginunder {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-left: 15px;
+  }
+
+  #margintext {
+    margin: 0 15px 20px 15px;
+    line-height: 1.8;
   }
 }
