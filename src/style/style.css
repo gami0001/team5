@@ -50,7 +50,9 @@
 
 #marginunder {
   text-align: left;
-  margin-left: 310px;
+  margin: 0 auto 1rem auto;
+  max-width: 700px;
+  padding: 0 1rem;
 }
 
 .card-undertextCenter {
@@ -69,8 +71,9 @@
 }
 
 #margintext {
-  margin: 0 310px 25px 310px;
-  line-height: 1.8;
+  margin: 0 auto 25px auto;
+  max-width: 700px;
+  padding: 0 1rem;
 }
 .card-section,
 .card-section2 {
@@ -90,12 +93,6 @@
   text-align: center;
 }
 
-.social-buttons {
-  position: absolute;
-  display: flex;
-  flex-direction: row;
-}
-
 @media (max-width: 900px) {
   .card-section1 {
     grid-template-columns: repeat(2, 1fr);
@@ -113,13 +110,11 @@
 
   #marginunder {
     font-size: 1.4rem;
-    text-align: left;
-    margin-left: 70px;
+    max-width: 640px;
+    padding: 0 1rem;
   }
-
   #margintext {
-    margin: 0 70px 20px 70px;
-    line-height: 1.8;
+    max-width: 640px;
   }
 
   .articleimg {
@@ -189,12 +184,9 @@
 
   #marginunder {
     font-size: 1.4rem;
-    text-align: left;
-    margin-left: 15px;
   }
 
   #margintext {
-    margin: 0 15px 20px 15px;
     line-height: 1.8;
   }
 }

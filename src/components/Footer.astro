@@ -4,14 +4,27 @@ import Button from "./Button.astro"
 <footer class="footer">
   <div class="social-buttons">
     <a href="https://facebook.com/dinside" target="_blank" rel="noopener noreferrer">
-    <Button variant="primary" icon="facebook" />
+      <Button variant="primary" icon="facebook" />
     </a>
-     <a href="https://instagram.com/dinside" target="_blank" rel="noopener noreferrer">
-    <Button variant="primary" icon="instagram" />
+    <a href="https://instagram.com/dinside" target="_blank" rel="noopener noreferrer">
+      <Button variant="primary" icon="instagram" />
     </a>
   </div>
-
-
-<img src="/footer.svg" alt="logofooter" style="width: 100%" />
 </footer>
 
+<style>
+.footer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: url("/footer.svg") no-repeat center/cover;
+}
+
+.social-buttons {
+  position: absolute;
+  bottom: 20px; 
+  right: 20px; 
+  display: flex;
+  gap: 15px;
+}
+</style>
