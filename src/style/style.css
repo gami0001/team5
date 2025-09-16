@@ -5,6 +5,12 @@
   margin-bottom: -25px;
 }
 
+.card-section {
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+}
+
 .card-section1 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -28,17 +34,21 @@
 }
 
 .card-undertext {
+  font-family: "Anton", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
   margin-left: 34px;
 }
 
-.card-undertext,
-.card-undertextCenter {
-  font-family: "Anton", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
+#marginunder {
+  text-align: left;
+  margin-left: 310px;
 }
 
 .card-undertextCenter {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-style: normal;
   text-align: center;
   margin-top: -8px;
 }
@@ -47,12 +57,21 @@
   font-family: "Inter", sans-serif;
   font-weight: normal;
   font-style: normal;
+  text-align: left;
 }
 
+#margintext {
+  margin: 0 310px 25px 310px;
+  line-height: 1.8;
+}
 .card-section,
 .card-section2 {
   padding: 2rem;
   border-radius: 12px;
+}
+
+.articleimg {
+  margin: 20px 0px 40px 0px;
 }
 
 .grid_1-1-1 {
