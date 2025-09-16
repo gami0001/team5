@@ -1,45 +1,14 @@
-.card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 12px;
-}
-
-.card.primary h3 {
-  font-family: "Inter", sans-serif;
-  font-size: 1.5rem;
-  font-weight: normal;
-}
-
-.card.secondary p {
-  font-family: "Anton", sans-serif;
-  font-size: 3rem;
-  font-weight: 400;
-}
-
-.card p {
-  margin: 0;
-  font-size: 0.95rem;
-  font-family: "Inter", sans-serif;
-  font-weight: normal;
-}
-
 .indexvideo {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: -25px;
+}
+
+.card-section {
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .card-section1 {
@@ -64,14 +33,22 @@
   margin: 0.5rem 0;
 }
 
-.card-undertext,
-.card-undertextCenter {
+.card-undertext {
   font-family: "Anton", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 400;
+  margin-left: 34px;
+}
+
+#marginunder {
+  text-align: left;
+  margin-left: 310px;
 }
 
 .card-undertextCenter {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-style: normal;
   text-align: center;
   margin-top: -8px;
 }
@@ -80,12 +57,29 @@
   font-family: "Inter", sans-serif;
   font-weight: normal;
   font-style: normal;
+  text-align: left;
 }
 
+#margintext {
+  margin: 0 310px 25px 310px;
+  line-height: 1.8;
+}
 .card-section,
 .card-section2 {
   padding: 2rem;
   border-radius: 12px;
+}
+
+.articleimg {
+  margin: 20px 0px 40px 0px;
+}
+
+.grid_1-1-1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  justify-items: center;
+  text-align: center;
 }
 
 @media (max-width: 900px) {
